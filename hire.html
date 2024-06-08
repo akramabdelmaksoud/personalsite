@@ -3,39 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hire Me - Your Name</title>
-    <link rel="stylesheet" href="hire.css">
+    <title>Job Submission Form</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Hire Me</h1>
-            <p>I'm a passionate software developer ready to bring your ideas to life.</p>
-        </header>
-        
-        <section class="hire-me-form">
-            <form action="/submit" method="post">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                 <div class="form-group">
-                    <label for="email">job title:</label>
-                    <input type="text" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="project-details">Project Details:</label>
-                    <textarea id="project-details" name="project-details" rows="5" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit">Hire Me</button>
-                </div>
-            </form>
-        </section>
+    <div class="form-container">
+        <h2>Submit Your Job Details</h2>
+        <form action="https://formspree.io/f/xeqyyjov" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="mail" required>
+            
+            <label for="job-title">Job Title:</label>
+            <input type="text" id="job-title" name="job-title" required>
+            
+            <label for="project-details">project Details:</label>
+            <textarea id="project-details" name="project-details" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </body>
 </html>
