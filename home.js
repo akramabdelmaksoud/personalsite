@@ -59,3 +59,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setInterval(autoSlide, 1000); // Change slides every 5 seconds
 });
+// JavaScript for minimizing header on scroll
+const header = document.querySelector('header');
+let lastScrollY = 0;
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        header.classList.add('minimized-header');
+    } else {
+        // Scrolling up
+        header.classList.remove('minimized-header');
+    }
+
+    lastScrollY = currentScrollY;
+});
