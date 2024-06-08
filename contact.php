@@ -1,5 +1,5 @@
 <?php
-eader("Access-Control-Allow-Origin: *"); // Enable CORS
+eader("Access-Control-Allow-Origin: *"); // 
 header("Access-Control-Allow-Methods: POST"); // Allow POST method
 
 $servername = "localhost";
