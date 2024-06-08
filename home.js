@@ -79,3 +79,24 @@ window.addEventListener('scroll', () => {
 
     lastScrollY = currentScrollY;
 });
+ document.getElementById('job-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const form = event.target;
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your submission has been received. We will get back to you soon.');
+                    window.location.href = 'index.html'; // Redirect to success page or homepage
+                } else {
+                    alert('Something went wrong. Please try again.'); // Handle other HTTP errors
+                }
+            }).catch(error => {
+                alert('Something went wrong. Please try again.'); // Handle network errors
+            });
+        });
