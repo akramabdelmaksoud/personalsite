@@ -61,17 +61,20 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // JavaScript for minimizing header on scroll
 const header = document.querySelector('header');
-let lastScrollY = 0;
+let lastScrollY = window.scrollY;
+let isHeaderMinimized = false;
 
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
 
-    if (currentScrollY > lastScrollY) {
-        // Scrolling down
-        header.classList.add('minimized-header');
-    } else {
-        // Scrolling up
-        header.classList.remove('minimized-header');
+    if (currentScrollY > lastScrollY && !isHeaderMinimized) {
+        // Scrolling down and header is not minimized
+        header.classList.add('minimized');
+        isHeaderMinimized = true; // Set flag to true
+    } else if (currentScrollY < lastScrollY && isHeaderMinimized) {
+        // Scrolling up and header is minimized
+        header.classList.remove('minimized');
+        isHeaderMinimized = false; // Set flag to false
     }
 
     lastScrollY = currentScrollY;
