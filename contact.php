@@ -1,4 +1,7 @@
 <?php
+eader("Access-Control-Allow-Origin: *"); // Enable CORS
+header("Access-Control-Allow-Methods: POST"); // Allow POST method
+
 $servername = "localhost";
 $username = "root";
 $password = "";
