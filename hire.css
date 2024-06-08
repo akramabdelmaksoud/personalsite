@@ -11,12 +11,11 @@ body {
 
 .form-container {
    
-      width: 750px;
+    width: 750px;
     background:rgba(82, 117, 211, 0.945);
     border: 2px solid transparent;
     border-radius: 10px;
     backdrop-filter: blur(50px);
-    color: white;
     padding: 40px 35px 55px ;
 }
 
