@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (targetSection) {
                 window.scrollTo({
-                    top: targetSection.offsetTop,                    top: targetSection.offsetTop,
+                    top: targetSection.offsetTop,
                     behavior: 'smooth'
                 });
             }
@@ -97,4 +97,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
