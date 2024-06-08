@@ -363,7 +363,7 @@ input[name="radio-btn1"]:nth-of-type(2):checked ~ .slides {
 input[name="radio-btn1"]:nth-of-type(3):checked ~ .slides {
     transform: translateX(-66.66%);
 }
-button {
+#hire .button {
   border-radius: .25rem;
   text-transform: uppercase;
   font-style: normal;
@@ -384,7 +384,7 @@ button {
   margin-right: 5px;
 }
 
-button:hover {
+#hire .button:hover {
   cursor: pointer;
   transition: all .3s ease-in;
   padding-right: 30px;
