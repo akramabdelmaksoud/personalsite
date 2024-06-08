@@ -12,6 +12,26 @@ body {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     background-attachment: fixed;
 }
+.minimized-header {
+    height: 60px; /* Adjust height as needed */
+    transition: height 0.3s ease; /* Smooth transition for height change */
+}
+
+.minimized-header .container {
+    justify-content: space-between;
+}
+
+.minimized-header .logo {
+    font-size: 1rem; /* Adjust font size */
+}
+
+.minimized-header nav ul {
+    display: none; /* Hide navigation links initially */
+}
+
+.minimized-header nav ul.open {
+    display: flex; /* Show navigation links when opened */
+}
 
 header {
     background: rgba(0, 0, 0, 0.8);
