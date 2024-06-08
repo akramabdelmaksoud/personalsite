@@ -9,10 +9,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetId = this.getAttribute('href').substring(1);
             const targetSection = document.getElementById(targetId);
 
-            window.scrollTo({
-                top: targetSection.offsetTop,
-                behavior: 'smooth'
-            });
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 
@@ -48,38 +50,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Automated Slider
-    let counter = 1;
-    const autoSlide = () => {
-        document.getElementById(`slide1-${counter}`).checked = true;
-        counter++;
-        if (counter > 3) {
-            counter = 1;
+    // Automated Slider (if needed)
+    // Let's assume you already have a function for autoSlide defined elsewhere
+
+    // JavaScript for minimizing header on scroll
+    const header = document.querySelector('header');
+    let lastScrollY = window.scrollY;
+    let isHeaderMinimized = false;
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && !isHeaderMinimized) {
+            // Scrolling down and header is not minimized
+            header.classList.add('minimized');
+            isHeaderMinimized = true; // Set flag to true
+        } else if (currentScrollY < lastScrollY && isHeaderMinimized) {
+            // Scrolling up and header is minimized
+            header.classList.remove('minimized');
+            isHeaderMinimized = false; // Set flag to false
         }
-    }
-    setInterval(autoSlide, 1000); // Change slides every 5 seconds
-});
-// JavaScript for minimizing header on scroll
-const header = document.querySelector('header');
-let lastScrollY = window.scrollY;
-let isHeaderMinimized = false;
 
-window.addEventListener('scroll', () => {
-    const currentScrollY = window.scrollY;
+        lastScrollY = currentScrollY;
+    });
 
-    if (currentScrollY > lastScrollY && !isHeaderMinimized) {
-        // Scrolling down and header is not minimized
-        header.classList.add('minimized');
-        isHeaderMinimized = true; // Set flag to true
-    } else if (currentScrollY < lastScrollY && isHeaderMinimized) {
-        // Scrolling up and header is minimized
-        header.classList.remove('minimized');
-        isHeaderMinimized = false; // Set flag to false
-    }
-
-    lastScrollY = currentScrollY;
-});
- document.getElementById('job-form').addEventListener('submit', function(event) {
+    // Form submission handling
+    const jobForm = document.getElementById('job-form');
+    if (jobForm) {
+        jobForm.addEventListener('submit', function(event) {
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
@@ -100,3 +98,5 @@ window.addEventListener('scroll', () => {
                 alert('Something went wrong. Please try again.'); // Handle network errors
             });
         });
+    }
+});
