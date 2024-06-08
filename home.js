@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (targetSection) {
                 window.scrollTo({
-                    top: targetSection.offsetTop,
+                    top: targetSection.offsetTop,                    top: targetSection.offsetTop,
                     behavior: 'smooth'
                 });
             }
@@ -49,9 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
             openLightbox(this.src, this.alt);
         });
     });
-
-    // Automated Slider (if needed)
-    // Let's assume you already have a function for autoSlide defined elsewhere
 
     // JavaScript for minimizing header on scroll
     const header = document.querySelector('header');
@@ -100,3 +97,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
