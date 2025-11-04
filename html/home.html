@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fancy Personal Website</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="C:\Users\panda\Desktop\personal website akram\css\home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+RZoOxTXxX1bY8LDv4o9puQ" crossorigin="anonymous">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="C:\Users\panda\Desktop\personal website akram\img\logo.png" alt="MyFancyLogo">
+            <div class="logo">your favorite web developer</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home">
+        <div class="container">
+            <h1>Hello, I'm Akram</h1>
+            <p>I'm a full-stack web developer.</p>
+            <a href="https://www.freecodecamp.org/news/what-is-a-fullstack-developer/" target="_blank" class="btn">Learn More</a>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a dedicated student at Ain Shams University, pursuing a degree in Computer and Software Engineering. Alongside my studies, I work as a full-stack web developer, honing my skills in both front-end and back-end technologies. My passion lies in creating dynamic, responsive websites and applications that provide exceptional user experiences. With a strong foundation in software engineering principles and hands-on experience in web development, I am eager to contribute to innovative projects and continue growing in this exciting field.</p>
+            <div class="img-container">
+                <img src="C:\Users\panda\Desktop\personal website akram\img\profile linkedin for website.png" alt="About Me Image">
+            </div>
+            <a href="C:\Users\panda\Desktop\cv akram\Akram Cv.pdf" class="cv-btn" target="_blank">View My CV</a>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="grid">
+                <!-- Project 1 -->
+                <div class="card">
+                    <h3>Clinic System Management project</h3>
+                    <p>The Clinic System Management project is designed to revolutionize the operational efficiency of 
+                        non-profit clinics, addressing the unique challenges they face in delivering healthcare to 
+                        underserved communities</p>
+                    <div class="slider">
+                        <div class="slides">
+                            <input type="radio" name="radio-btn1" id="slide1-1" checked>
+                            <input type="radio" name="radio-btn1" id="slide1-2">
+                            <input type="radio" name="radio-btn1" id="slide1-3">
+                            <div class="slide first">
+                                <p class="description">"Admin dashboard for managing users, appointments, donations, and staff in a medical management system."</p>
+                                <img src="C:\Users\panda\Desktop\personal website akram\img\dashboard medicalproject.png" alt="Project 1 Screenshot 1">
+                            </div>
+                            <div class="slide">
+                                <p class="description">"Appointment table displaying scheduled patient appointments for efficient management in the doctor dashboard."</p>
+                                <img src="C:\Users\panda\Desktop\personal website akram\img\appointments medical project.png" alt="Project 1 Screenshot 2">
+                            </div>
+                            <div class="slide">
+                                <p class="description">"Donation page with a Popup Message After Donation Completion."</p>
+                                <img src="C:\Users\panda\Desktop\personal website akram\img\donation medicalproject.png" alt="Project 1 Screenshot 3">
+                            </div>
+                            <div class="auto-navigation">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                            </div>
+                            <div class="navigation-manual">
+                                <label for="slide1-1" class="manual-btn"></label>
+                                <label for="slide1-2" class="manual-btn"></label>
+                                <label for="slide1-3" class="manual-btn"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2.</p>
+                    <div class="img-container">
+                        <img src="path_to_project2_screenshot1.jpg" alt="Project 2 Screenshot 1" onclick="openLightbox('path_to_project2_screenshot1.jpg', 'Project 2 Screenshot 1')">
+                        <p class="description">Description of Project 2 Screenshot 1.</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="path_to_project2_screenshot2.jpg" alt="Project 2 Screenshot 2" onclick="openLightbox('path_to_project2_screenshot2.jpg', 'Project 2 Screenshot 2')">
+                        <p class="description">Description of Project 2 Screenshot 2.</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="path_to_project2_screenshot3.jpg" alt="Project 2 Screenshot 3" onclick="openLightbox('path_to_project2_screenshot3.jpg', 'Project 2 Screenshot 3')">
+                        <p class="description">Description of Project 2 Screenshot 3.</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="card">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3.</p>
+                    <div class="img-container">
+                        <img src="path_to_project3_screenshot1.jpg" alt="Project 3 Screenshot 1" onclick="openLightbox('path_to_project3_screenshot1.jpg', 'Project 3 Screenshot 1')">
+                        <p class="description">Description of Project 3 Screenshot 1.</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="path_to_project3_screenshot2.jpg" alt="Project 3 Screenshot 2" onclick="openLightbox('path_to_project3_screenshot2.jpg', 'Project 3 Screenshot 2')">
+                        <p class="description">Description of Project 3 Screenshot 2.</p>
+                    </div>
+                    <div class="img-container">
+                        <img src="path_to_project3_screenshot3.jpg" alt="Project 3 Screenshot 3" onclick="openLightbox('path_to_project3_screenshot3.jpg', 'Project 3 Screenshot 3')">
+                        <p class="description">Description of Project 3 Screenshot 3.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="job">Job Description</label>
+                    <input type="text" id="job" name="job">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; copyrights</p>
+        </div>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100011333873055"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.instagram.com/akram_maksoud/?hl=en"><i class='bx bxl-instagram'></i></a>
+            <a href="https://github.com/akramabdelmaksoud"><i class='bx bxl-github'></i></a>
+            <a href="https://wa.me/+201032765977" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+            <a href="https://www.linkedin.com/public-profile/settings"><i class='bx bxl-linkedin'></i></a>
+        </div>
+    </footer>
+    <script src="C:\Users\panda\Desktop\personal website akram\javascript\home.js"></script>
+</body>
+</html>

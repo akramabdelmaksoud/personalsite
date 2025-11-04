@@ -1,0 +1,370 @@
+/* Basic styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #fff;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background-attachment: fixed;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    color: rgb(148, 95, 80);
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    margin-right: 500px;
+}
+
+.logo img {
+    width: 50px; /* Adjust the width as per your design */
+    height: auto;
+    margin-right: 10px; /* Adjust spacing as needed */
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: rgb(148, 95, 80);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcb47;
+}
+
+section {
+    padding: 3rem 0;
+    background: rgba(0, 0, 0, 0.7);
+    margin-bottom: 1rem;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+#home {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: rgb(148, 95, 80);
+}
+
+#home p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: rgb(235, 172, 76);
+}
+
+#home .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffcb47;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+#home .btn:hover {
+    background: #fff;
+}
+
+#about, #portfolio, #contact {
+    text-align: center;
+}
+
+#about .img-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#about .img-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+#portfolio .card {
+    background: rgb(148, 95, 80);
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#portfolio .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#portfolio .card img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#portfolio .card img:hover {
+    transform: scale(1.1);
+}
+#portfolio .card h3{
+    color: #6a11cb;
+}
+
+.description {
+    margin-top: 10px;
+    color:  #ffcb47;
+}
+
+/* Lightbox CSS */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 4px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+.lightbox .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #27a63a;
+    z-index: 1100; /* Ensure it's above the lightbox background */
+}
+
+form .form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+form .form-group label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+form .form-group input,
+form .form-group textarea {
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ffcb47;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form .btn:hover {
+    background: #fff;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .contact-details {
+    margin-bottom: 1rem;
+}
+
+footer .contact-details p {
+    margin-bottom: 0.5rem;
+}
+
+footer .social a {
+    color: rgb(148, 95, 80);
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer .social a:hover {
+    color: #ffcb47;
+}
+
+#about .cv-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 10px 20px;
+    background: #ffcb47;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+#about .cv-btn:hover {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Slider CSS */
+.slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    width: 300%;
+    transition: transform 0.6s ease;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 100%;
+    transition: transform 0.6s ease;
+    justify-content: center; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    bottom: 10px;
+}
+
+.auto-btn1, .auto-btn2, .auto-btn3 {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+}
+
+.auto-btn1:hover, .auto-btn2:hover, .auto-btn3:hover {
+    background-color: #fff;
+}
+
+.navigation-manual {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    z-index: 999;
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.6s ease;
+    margin: 0 5px;
+}
+
+.manual-btn:hover {
+    background-color: #fff;
+}
+
+/* Radio Button Checks for Slider */
+input[name="radio-btn1"]:nth-of-type(1):checked ~ .slides {
+    transform: translateX(0);
+}
+
+input[name="radio-btn1"]:nth-of-type(2):checked ~ .slides {
+    transform: translateX(-33.33%);
+}
+
+input[name="radio-btn1"]:nth-of-type(3):checked ~ .slides {
+    transform: translateX(-66.66%);
+}
+
+/* Auto Navigation */
+.auto-navigation {
+    display: none;
+}
