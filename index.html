@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akram Abdelmaksoud | Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="home.css">
+    <!-- Redirect for GitHub Pages compatibility -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+    
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <header class="glass-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="img/logo.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Akram Abdelmaksoud</span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="greeting">Hello, I'm</div>
+                <h1 class="hero-title">
+                    <span class="name-gradient">Akram Abdelmaksoud</span>
+                </h1>
+                <div class="typing-container">
+                    <span class="typing-text">I'm a </span>
+                    <span class="typing-dynamic" id="typing-text"></span>
+                    <span class="typing-cursor">|</span>
+                </div>
+                <p class="hero-description">Crafting digital experiences that blend innovation with elegance</p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class='bx bx-arrow-down'></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Get In Touch</span>
+                        <i class='bx bx-envelope'></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="img/profile linkedin for website.png" alt="Akram Abdelmaksoud" class="profile-img">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">The Story Behind the Code</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-image-wrapper">
+                    <div class="image-frame">
+                        <img src="img/profile linkedin for website.png" alt="Akram Abdelmaksoud" class="about-img">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="floating-badge">
+                        <i class='bx bx-code-alt'></i>
+                        <span>Full-Stack Developer</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p class="about-intro">I am a dedicated student at <strong>Ain Shams University</strong>, pursuing a degree in <strong>Computer and Software Engineering</strong>. Alongside my studies, I work as a full-stack web developer, honing my skills in both front-end and back-end technologies.</p>
+                    <p class="about-description">My passion lies in creating dynamic, responsive websites and applications that provide exceptional user experiences. With a strong foundation in software engineering principles and hands-on experience in web development, I am eager to contribute to innovative projects and continue growing in this exciting field.</p>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <i class='bx bx-code-curly'></i>
+                            <span>Frontend Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class='bx bx-server'></i>
+                            <span>Backend Development</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class='bx bx-mobile-alt'></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class='bx bx-palette'></i>
+                            <span>UI/UX Design</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary cv-btn" id="open-cv-btn">
+                        <span>View My CV</span>
+                        <i class='bx bx-file-blank'></i>
+                    </button>
+                    <a href="Cv_AkramAbdelmaksoud_2025.pdf" download class="btn btn-secondary cv-download-btn">
+                        <span>Download CV</span>
+                        <i class='bx bx-download'></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Showcasing innovative solutions and creative excellence</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-card" data-tilt>
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class='bx bx-hospital'></i>
+                        </div>
+                        <h3>Clinic System Management</h3>
+                        <span class="card-badge">Full-Stack</span>
+                    </div>
+                    <p class="card-description">The Clinic System Management project is designed to revolutionize the operational efficiency of non-profit clinics, addressing the unique challenges they face in delivering healthcare to underserved communities.</p>
+                    <div class="project-slider">
+                        <div class="slider-container">
+                            <div class="slider-wrapper">
+                                <div class="slide active">
+                                    <img src="img/dashboard medicalproject.png" alt="Admin Dashboard">
+                                    <div class="slide-overlay">
+                                        <p class="slide-description">Admin dashboard for managing users, appointments, donations, and staff in a medical management system.</p>
+                                    </div>
+                            </div>
+                            <div class="slide">
+                                    <img src="img/appointments medical project.png" alt="Appointments">
+                                    <div class="slide-overlay">
+                                        <p class="slide-description">Appointment table displaying scheduled patient appointments for efficient management in the doctor dashboard.</p>
+                                    </div>
+                            </div>
+                            <div class="slide">
+                                    <img src="img/donation medicalproject.png" alt="Donations">
+                                    <div class="slide-overlay">
+                                        <p class="slide-description">Donation page with a Popup Message After Donation Completion.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        <div class="slider-controls">
+                            <button class="slider-btn prev" aria-label="Previous slide">
+                                <i class='bx bx-chevron-left'></i>
+                            </button>
+                            <div class="slider-dots">
+                                <span class="dot active" data-slide="0"></span>
+                                <span class="dot" data-slide="1"></span>
+                                <span class="dot" data-slide="2"></span>
+                            </div>
+                            <button class="slider-btn next" aria-label="Next slide">
+                                <i class='bx bx-chevron-right'></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="tech-stack">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <button class="view-project-btn">
+                            <span>View Project</span>
+                            <i class='bx bx-right-arrow-alt'></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Amazing</h2>
+                <p class="section-subtitle">Have a project in mind? I'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>Send me an email anytime</p>
+                        <a href="mailto:akram@example.com">akram@example.com</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class='bx bx-phone'></i>
+                        </div>
+                        <h3>Phone</h3>
+                        <p>Call or WhatsApp me</p>
+                        <a href="https://wa.me/+201032765977">+20 103 276 5977</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class='bx bx-map'></i>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Cairo, Egypt</p>
+                        <span>Ain Shams University</span>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class='bx bx-user'></i>
+                                Name
+                            </label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="job">
+                                <i class='bx bx-briefcase'></i>
+                                Job Description
+                            </label>
+                            <input type="text" id="job" name="job" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">
+                            <i class='bx bx-envelope'></i>
+                            Email
+                        </label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">
+                            <i class='bx bx-message'></i>
+                            Message
+                        </label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span>Send Message</span>
+                        <i class='bx bx-send'></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="img/logo.png" alt="Logo" class="footer-logo">
+                    <p>Building digital experiences that inspire and innovate</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/profile.php?id=100011333873055" target="_blank" class="social-link" aria-label="Facebook">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.instagram.com/akram_maksoud/?hl=en" target="_blank" class="social-link" aria-label="Instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="https://github.com/akramabdelmaksoud" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://wa.me/+201032765977" target="_blank" class="social-link" aria-label="WhatsApp">
+                        <i class='bx bxl-whatsapp'></i>
+                    </a>
+                    <a href="https://www.linkedin.com/public-profile/settings" target="_blank" class="social-link" aria-label="LinkedIn">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                </div>
+                </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Akram Abdelmaksoud. All rights reserved.</p>
+                <p class="made-with">Made with <i class='bx bx-heart'></i> and passion</p>
+        </div>
+        </div>
+    </footer>
+    
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">
+            <i class='bx bx-x'></i>
+        </button>
+        <img src="" alt="" class="lightbox-img">
+        <button class="lightbox-prev" aria-label="Previous image">
+            <i class='bx bx-chevron-left'></i>
+        </button>
+        <button class="lightbox-next" aria-label="Next image">
+            <i class='bx bx-chevron-right'></i>
+        </button>
+    </div>
+    
+    <!-- CV Viewer Modal -->
+    <div class="cv-modal" id="cv-modal">
+        <div class="cv-modal-overlay"></div>
+        <div class="cv-modal-container">
+            <div class="cv-modal-header">
+                <div class="cv-header-content">
+                    <div class="cv-icon-wrapper">
+                        <i class='bx bx-file-blank'></i>
+                    </div>
+                    <div class="cv-header-text">
+                        <h2>Akram Abdelmaksoud</h2>
+                        <p>Full-Stack Developer | Software Engineer</p>
+                    </div>
+                </div>
+                <div class="cv-modal-actions">
+                    <a href="Cv_AkramAbdelmaksoud_2025.pdf" download class="cv-action-btn download-btn">
+                        <i class='bx bx-download'></i>
+                        <span>Download</span>
+                    </a>
+                    <button class="cv-action-btn close-cv-btn" id="close-cv-btn">
+                        <i class='bx bx-x'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="cv-modal-body">
+                <div class="cv-viewer-wrapper">
+                    <iframe src="Cv_AkramAbdelmaksoud_2025.pdf#toolbar=1&navpanes=1&scrollbar=1" 
+                            class="cv-iframe" 
+                            title="Akram's CV">
+                        <p>Your browser does not support PDFs. 
+                            <a href="Cv_AkramAbdelmaksoud_2025.pdf" download>Download the CV instead</a>
+                        </p>
+                    </iframe>
+                </div>
+                <div class="cv-loading">
+                    <div class="cv-spinner"></div>
+                    <p>Loading CV...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="home.js"></script>
+</body>
+</html>
